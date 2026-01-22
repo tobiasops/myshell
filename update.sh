@@ -27,10 +27,10 @@ shell_configs=(
 # source utils script before installation
 if [[ "$is_standalone" ]]; then
     mkdir -p "$repo_directory"
-    default_branch="ryo" # `curl -s https://api.github.com/repos/retrozinndev/colorshell | jq -r .default_branch`
+    default_branch="ryo" # `curl -s https://api.github.com/repos/tobiasops/myshell | jq -r .default_branch`
     # get utils script
     echo "fetching utils script..."
-    curl -s https://raw.githubusercontent.com/retrozinndev/colorshell/refs/heads/$default_branch/scripts/utils.sh > $temp_dir/utils.sh
+    curl -s https://raw.githubusercontent.com/tobiasops/myshell/refs/heads/$default_branch/scripts/utils.sh > $temp_dir/utils.sh
     source $temp_dir/utils.sh
 else
     source ./scripts/utils.sh
@@ -47,7 +47,7 @@ fi
 {
 Print_header
 echo -e "Colorshell is a project made by retrozinndev. 
-Source: https://github.com/retrozinndev/colorshell\n"
+Source: https://github.com/tobiasops/myshell\n"
 sleep .5
 
 echo "This is colorshell's update script"
@@ -78,7 +78,7 @@ if [[ "$answer" == y ]] || [[ "$skip_prompts" ]]; then
             git -C "$repo_directory" checkout ryo
             git -C "$repo_directory" fetch && git -C "$repo_directory" pull --rebase
         else
-            git clone https://github.com/retrozinndev/colorshell.git "$repo_directory"
+            git clone https://github.com/tobiasops/myshell.git "$repo_directory"
         fi
     fi
 
@@ -144,7 +144,7 @@ if [[ "$answer" == y ]] || [[ "$skip_prompts" ]]; then
         echo "Colorshell is updated! :D"
         sleep .8
         echo "If you have issues with this update, please report it!"
-        echo "Issue Tracker: https://github.com/retrozinndev/colorshell/issues"
+        echo "Issue Tracker: https://github.com/tobiasops/myshell/issues"
         sleep .5
         echo "Thanks for using colorshell! I really appreciate that :P"
         printf "\n"

@@ -9,7 +9,7 @@
 # -------------
 # The repository's api url
 # -------------
-repo_api_url=https://api.github.com/repos/retrozinndev/colorshell
+repo_api_url=https://api.github.com/repos/tobiasops/myshell
 
 # -------------
 # Sends stdout log with type and message provided 
@@ -38,7 +38,7 @@ function Send_log() {
 }
 
 # -------------
-# Prints retrozinndev/colorshell installation 
+# Prints tobiasops/myshell installation 
 # script's welcome header on stdout
 # -------------
 function Print_header() {
@@ -70,7 +70,7 @@ function Ask() {
 function Is_running() {
     if gdbus introspect --session \
         --dest io.github.retrozinndev.colorshell \
-        --object-path /io/github/retrozinndev/colorshell > /dev/null 2>&1
+        --object-path /io/github/tobiasops/myshell > /dev/null 2>&1
     then
         return 0
     fi

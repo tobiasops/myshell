@@ -199,7 +199,7 @@ you should use the socket in the XDG_RUNTIME_DIR/colorshell.sock for a faster re
 
             // add icons 
             Gtk.IconTheme.get_for_display(Gdk.Display.get_default()!)
-                .add_resource_path("/io/github/retrozinndev/colorshell/icons")
+                .add_resource_path("/io/github/tobiasops/myshell/icons")
         } catch(_e) {
             const e = _e as Error;
             console.error(`Error: couldn't load gresource! Stderr: ${e.message}\n${e.stack}`);

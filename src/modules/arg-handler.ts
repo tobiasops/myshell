@@ -63,7 +63,7 @@ export function handleArguments(cmd: RemoteCaller, args: Array<string>): number 
         case "version":
         case "v":
             cmd.print_literal(`colorshell by retrozinndev, version ${COLORSHELL_VERSION
-                }${DEVEL ? " (devel)" : ""}\nhttps://github.com/retrozinndev/colorshell`);
+                }${DEVEL ? " (devel)" : ""}\nhttps://github.com/tobiasops/myshell`);
             return 0;
 
         case "dev":

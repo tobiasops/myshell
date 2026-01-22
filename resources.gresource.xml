@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
     <!-- Sass -->
-    <gresource prefix="/io/github/retrozinndev/colorshell/styles">
+    <gresource prefix="/io/github/tobiasops/myshell/styles">
         <file alias="main">styles/main.scss</file>
         <file alias="mixins">styles/_mixins.scss</file>
         <file alias="colors">styles/_colors.scss</file>
@@ -16,7 +16,7 @@
     </gresource>
 
     <!-- Icons -->
-    <gresource prefix="/io/github/retrozinndev/colorshell/icons/scalable/actions">
+    <gresource prefix="/io/github/tobiasops/myshell/icons/scalable/actions">
         <file alias="applications-other-symbolic.svg">icons/applications-other-symbolic.svg</file>
         <file alias="arrow-circular-top-right-symbolic.svg">icons/arrow-circular-top-right-symbolic.svg</file>
         <file alias="circle-filled-symbolic.svg">icons/circle-filled-symbolic.svg</file>

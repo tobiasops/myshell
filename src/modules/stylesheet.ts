@@ -101,9 +101,9 @@ export class Stylesheet {
             this.#outputPath.make_directory_with_parents(null);
 
         this.#stylesPaths = Gio.resources_enumerate_children(
-            "/io/github/retrozinndev/colorshell/styles", null
+            "/io/github/tobiasops/myshell/styles", null
         ).map(name => 
-            `/io/github/retrozinndev/colorshell/styles/${name}`
+            `/io/github/tobiasops/myshell/styles/${name}`
         );
 
         // Rules won't change at runtime in a common build, 
@@ -138,7 +138,7 @@ export class Stylesheet {
         monitorFile(`${GLib.get_user_cache_dir()}/wal/colors`, () => {
             this.#sassStyles.colors = `${this.getColorDefinitions()}\n${
                 this.organizeModuleImports(this.getStyleData(
-                    "/io/github/retrozinndev/colorshell/styles/colors"
+                    "/io/github/tobiasops/myshell/styles/colors"
                 ))
             }`;
             this.compileApply();

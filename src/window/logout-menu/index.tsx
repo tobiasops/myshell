@@ -108,7 +108,7 @@ export const LogoutMenu = (mon: number) =>
                                   actions: [{
                                       text: "Report Issue on colorshell",
                                       onAction: () => execAsync(
-                                          `xdg-open https://github.com/retrozinndev/colorshell/issues/new`
+                                          `xdg-open https://github.com/tobiasops/myshell/issues/new`
                                       ).catch((err: Gio.IOErrorEnum) => 
                                           Notifications.getDefault().sendNotification({
                                               appName: "colorshell",
