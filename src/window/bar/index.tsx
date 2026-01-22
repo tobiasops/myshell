@@ -19,7 +19,7 @@ export const Bar = (mon: number) => {
 
   // EXCLUSIVE: Sørger for at Hyprland ikke legger vinduer OPPÅ trigger-sonen.
   // Dette garanterer at "onHover" alltid fungerer.
-  exclusivity={Astal.Exclusivity.EXCLUSIVE}
+  exclusivity={Astal.Exclusivity.NORMAL}
 
   monitor={mon}
   // Key-layer setup
