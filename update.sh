@@ -82,17 +82,17 @@ if [[ "$answer" == y ]] || [[ "$skip_prompts" ]]; then
         fi
     fi
 
-    Ask "Nice! Update to latest stable version instead of unstable(latest commit)?"
+  #  Ask "Nice! Update to latest stable version instead of unstable(latest commit)?"
 
-    if [[ -z "$skip_prompts" ]] && [[ "$answer" == y ]]; then
-        Send_log "fetching latest release from colorshell repository"
-        # use `head -n1` because for some reason, github api shows the same release 3 times :'(
-        latest_tag=`curl -s "$repo_api_url/releases" | jq -r '. | select(.[].prerelease == false) | .[0].tag_name' | head -n1`
+  # if [[ -z "$skip_prompts" ]] && [[ "$answer" == y ]]; then
+  #      Send_log "fetching latest release from colorshell repository"
+  #      use `head -n1` because for some reason, github api shows the same release 3 times :'(
+  #      latest_tag=`curl -s "$repo_api_url/releases" | jq -r '. | select(.[].prerelease == false) | .[0].tag_name' | head -n1`
         
-        Send_log "Done fetching"
-        Send_log "Checking out latest non-pre-release version: $latest_tag"
-        git -C "$repo_directory" checkout $latest_tag > /dev/null 2>&1
-    fi
+  #       Send_log "Done fetching"
+  #       Send_log "Checking out latest non-pre-release version: $latest_tag"
+  #       git -C "$repo_directory" checkout $latest_tag > /dev/null 2>&1
+  # fi
 
     Send_log "Updating..."
 

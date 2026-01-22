@@ -74,16 +74,16 @@ if [[ "$answer" == y ]] || [[ "$skip_prompts" ]]; then
         fi
     fi
 
-    Ask "Nice! Do you want to use the stable version instead of the unstable(latest commit)?"
+   # Ask "Nice! Do you want to use the stable version instead of the unstable(latest commit)?"
 
-    if [[ -z "$skip_prompts" ]] && [[ "$answer" == y ]]; then
-        Send_log "fetching latest release from colorshell repository"
-        latest_tag=`curl -s "$repo_api_url/releases" | jq -r '. | select(.[].prerelease == false) | .[0].tag_name'`
+   # if [[ -z "$skip_prompts" ]] && [[ "$answer" == y ]]; then
+   #     Send_log "fetching latest release from colorshell repository"
+   #     latest_tag=`curl -s "$repo_api_url/releases" | jq -r '. | select(.[].prerelease == false) | .[0].tag_name'`
         
-        Send_log "Done fetching"
-        Send_log "Checking out latest non-pre-release version: $latest_tag"
-        git -C "$repo_directory" checkout $latest_tag > /dev/null 2>&1
-    fi
+   #     Send_log "Done fetching"
+   #     Send_log "Checking out latest non-pre-release version: $latest_tag"
+   #     git -C "$repo_directory" checkout $latest_tag > /dev/null 2>&1
+   # fi
 
     Send_log "Starting installation..."
 
