@@ -10,7 +10,7 @@ importers:
     devDependencies:
       ags:
         specifier: file:/usr/share/ags/js
-        version: file:../../../../usr/share/ags/js(gnim@1.8.2)
+        version: file:../../../../../usr/share/ags/js(gnim@1.8.2)
       fuse.js:
         specifier: ^7.1.0
         version: 7.1.0
@@ -20,8 +20,8 @@ importers:
 
 packages:
 
-  ags@file:../../../../usr/share/ags/js:
-    resolution: {directory: ../../../../usr/share/ags/js, type: directory}
+  ags@file:../../../../../usr/share/ags/js:
+    resolution: {directory: ../../../../../usr/share/ags/js, type: directory}
     engines: {gjs: '>=1.79.0'}
     os: [linux]
     peerDependencies:
@@ -43,7 +43,7 @@ packages:
 
 snapshots:
 
-  ags@file:../../../../usr/share/ags/js(gnim@1.8.2):
+  ags@file:../../../../../usr/share/ags/js(gnim@1.8.2):
     dependencies:
       gnim: 1.8.2
 
