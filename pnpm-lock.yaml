@@ -11,6 +11,9 @@ importers:
       ags:
         specifier: file:/usr/share/ags/js
         version: file:../../../../../usr/share/ags/js(gnim@1.8.2)
+      astal:
+        specifier: file:/usr/share/astal/gjs
+        version: file:../../../../../usr/share/astal/gjs
       fuse.js:
         specifier: ^7.1.0
         version: 7.1.0
@@ -26,6 +29,9 @@ packages:
     os: [linux]
     peerDependencies:
       gnim: ^1.9.0
+
+  astal@file:../../../../../usr/share/astal/gjs:
+    resolution: {directory: ../../../../../usr/share/astal/gjs, type: directory}
 
   fuse.js@7.1.0:
     resolution: {integrity: sha512-trLf4SzuuUxfusZADLINj+dE8clK1frKdmqiJNb1Es75fmI5oY6X2mxLVUciLLjxqw/xr72Dhy+lER6dGd02FQ==}
@@ -46,6 +52,8 @@ snapshots:
   ags@file:../../../../../usr/share/ags/js(gnim@1.8.2):
     dependencies:
       gnim: 1.8.2
+
+  astal@file:../../../../../usr/share/astal/gjs: {}
 
   fuse.js@7.1.0: {}
 
